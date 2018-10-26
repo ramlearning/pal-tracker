@@ -29,7 +29,7 @@ jobs:
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
         on:
-          all_branches:true
+          all_branches: true
     - stage: deploy to review
       language: java
       before_install:
@@ -54,3 +54,5 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
+        on:
+          all_branches: true
